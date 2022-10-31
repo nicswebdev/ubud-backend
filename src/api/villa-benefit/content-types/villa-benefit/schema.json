@@ -1,0 +1,19 @@
+{
+  "kind": "collectionType",
+  "collectionName": "villa_benefits",
+  "info": {
+    "singularName": "villa-benefit",
+    "pluralName": "villa-benefits",
+    "displayName": "Villa_Benefits"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_seo_seos",
+  "info": {
+    "displayName": "Seo",
+    "icon": "align-justify"
+  },
+  "options": {},
+  "attributes": {
+    "SEO_Title": {
+      "type": "string",
+      "required": true
+    },
+    "SEO_Keyword": {
+      "type": "string",
+      "required": true
+    },
+    "SEO_Descriptions": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

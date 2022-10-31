@@ -1,0 +1,194 @@
+diff --git a/node_modules/@strapi/admin/admin/src/pages/HomePage/HomeHeader.js b/node_modules/@strapi/admin/admin/src/pages/HomePage/HomeHeader.js
+index a846220..ac19905 100644
+--- a/node_modules/@strapi/admin/admin/src/pages/HomePage/HomeHeader.js
++++ b/node_modules/@strapi/admin/admin/src/pages/HomePage/HomeHeader.js
+@@ -48,21 +48,6 @@ const HomeHeader = ({ hasCreatedContentType, onCreateCT }) => {
+                     'Congrats! You are logged as the first administrator. To discover the powerful features provided by Strapi, we recommend you to create your first Content type!',
+                 })}
+           </WordWrap>
+-          {hasCreatedContentType ? (
+-            <Link isExternal href="https://strapi.io/blog">
+-              {formatMessage({
+-                id: 'app.components.HomePage.button.blog',
+-                defaultMessage: 'See more on the blog',
+-              })}
+-            </Link>
+-          ) : (
+-            <Button size="L" onClick={onCreateCT} endIcon={<ArrowRight />}>
+-              {formatMessage({
+-                id: 'app.components.HomePage.create',
+-                defaultMessage: 'Create your first Content type',
+-              })}
+-            </Button>
+-          )}
+         </StackCustom>
+       </Box>
+     </div>
+diff --git a/node_modules/@strapi/admin/admin/src/pages/HomePage/index.js b/node_modules/@strapi/admin/admin/src/pages/HomePage/index.js
+index ae1448f..5c53640 100644
+--- a/node_modules/@strapi/admin/admin/src/pages/HomePage/index.js
++++ b/node_modules/@strapi/admin/admin/src/pages/HomePage/index.js
+@@ -76,12 +76,7 @@ const HomePage = () => {
+             </GridItem>
+           </Grid>
+           <Grid gap={6}>
+-            <GridItem col={8} s={12}>
+-              {showGuidedTour ? <GuidedTourHomepage /> : <ContentBlocks />}
+-            </GridItem>
+-            <GridItem col={4} s={12}>
+-              <SocialLinks />
+-            </GridItem>
++            
+           </Grid>
+         </Box>
+       </Main>
+diff --git a/node_modules/@strapi/admin/admin/src/pages/SettingsPage/pages/ApplicationInfosPage/index.js b/node_modules/@strapi/admin/admin/src/pages/SettingsPage/pages/ApplicationInfosPage/index.js
+index 1adc22f..26d7854 100644
+--- a/node_modules/@strapi/admin/admin/src/pages/SettingsPage/pages/ApplicationInfosPage/index.js
++++ b/node_modules/@strapi/admin/admin/src/pages/SettingsPage/pages/ApplicationInfosPage/index.js
+@@ -115,65 +115,18 @@ const ApplicationInfosPage = () => {
+                       })}
+                     </Typography>
+                     <Typography as="p">v{strapiVersion}</Typography>
+-                    <Link
+-                      href={
+-                        appInfos.communityEdition
+-                          ? 'https://discord.strapi.io'
+-                          : 'https://support.strapi.io/support/home'
+-                      }
+-                      isExternal
+-                      endIcon={<ExternalLink />}
+-                    >
+-                      {formatMessage({
+-                        id: 'Settings.application.get-help',
+-                        defaultMessage: 'Get help',
+-                      })}
+-                    </Link>
+                   </GridItem>
+                   <GridItem col={6} s={12}>
+-                    <Typography variant="sigma" textColor="neutral600">
+-                      {formatMessage({
+-                        id: 'Settings.application.edition-title',
+-                        defaultMessage: 'current plan',
+-                      })}
+-                    </Typography>
+-                    <Typography as="p">
+-                      {formatMessage({
+-                        id: currentPlan,
+-                        defaultMessage: `${
+-                          appInfos.communityEdition ? 'Community Edition' : 'Enterprise Edition'
+-                        }`,
+-                      })}
+-                    </Typography>
++                    
+                   </GridItem>
+                 </Grid>
+ 
+                 <Grid paddingTop={1}>
+                   <GridItem col={6} s={12}>
+-                    {shouldUpdateStrapi && (
+-                      <Link
+-                        href={`https://github.com/strapi/strapi/releases/tag/${latestStrapiReleaseTag}`}
+-                        isExternal
+-                        endIcon={<ExternalLink />}
+-                      >
+-                        {formatMessage({
+-                          id: 'Settings.application.link-upgrade',
+-                          defaultMessage: 'Upgrade your admin panel',
+-                        })}
+-                      </Link>
+-                    )}
++                    
+                   </GridItem>
+                   <GridItem col={6} s={12}>
+-                    <Link
+-                      href="https://strapi.io/pricing-self-hosted"
+-                      isExternal
+-                      endIcon={<ExternalLink />}
+-                    >
+-                      {formatMessage({
+-                        id: 'Settings.application.link-pricing',
+-                        defaultMessage: 'See all pricing plans',
+-                      })}
+-                    </Link>
++                    
+                   </GridItem>
+                 </Grid>
+ 
+diff --git a/node_modules/@strapi/admin/admin/src/translations/en.json b/node_modules/@strapi/admin/admin/src/translations/en.json
+index 128dff9..61fa181 100644
+--- a/node_modules/@strapi/admin/admin/src/translations/en.json
++++ b/node_modules/@strapi/admin/admin/src/translations/en.json
+@@ -14,7 +14,7 @@
+   "Auth.form.confirmPassword.label": "Confirmation Password",
+   "Auth.form.currentPassword.label": "Current Password",
+   "Auth.form.email.label": "Email",
+-  "Auth.form.email.placeholder": "e.g. kai@doe.com",
++  "Auth.form.email.placeholder": "Email",
+   "Auth.form.error.blocked": "Your account has been blocked by the administrator.",
+   "Auth.form.error.code.provide": "Incorrect code provided.",
+   "Auth.form.error.confirmed": "Your account email is not confirmed.",
+@@ -44,8 +44,8 @@
+   "Auth.form.rememberMe.label": "Remember me",
+   "Auth.form.username.label": "Username",
+   "Auth.form.username.placeholder": "e.g. Kai_Doe",
+-  "Auth.form.welcome.subtitle": "Log in to your Strapi account",
+-  "Auth.form.welcome.title": "Welcome to Strapi!",
++  "Auth.form.welcome.subtitle": "Log in to your Kayumanis Jimbaran CMS account",
++  "Auth.form.welcome.title": "Welcome!",
+   "Auth.link.forgot-password": "Forgot your password?",
+   "Auth.link.ready": "Ready to sign in?",
+   "Auth.link.signin": "Sign in",
+@@ -115,8 +115,8 @@
+   "Settings.application.link-pricing": "See all pricing plans",
+   "Settings.application.link-upgrade": "Upgrade your admin panel",
+   "Settings.application.node-version": "node version",
+-  "Settings.application.strapi-version": "strapi version",
+-  "Settings.application.strapiVersion": "strapi version",
++  "Settings.application.strapi-version": "version",
++  "Settings.application.strapiVersion": "version",
+   "Settings.application.title": "Overview",
+   "Settings.application.customization": "Customization",
+   "Settings.application.customization.carousel.title": "Logo",
+@@ -180,7 +180,7 @@
+   "Settings.profile.form.section.experience.here": "here",
+   "Settings.profile.form.section.experience.interfaceLanguage": "Interface language",
+   "Settings.profile.form.section.experience.interfaceLanguage.hint": "This will only display your own interface in the chosen language.",
+-  "Settings.profile.form.section.experience.interfaceLanguageHelp": "Preference changes will apply only to you. More information is available {here}.",
++  "Settings.profile.form.section.experience.interfaceLanguageHelp": "Preference changes will apply only to you.",
+   "Settings.profile.form.section.experience.mode.label": "Interface mode",
+   "Settings.profile.form.section.experience.mode.hint": "Displays your interface in the chosen mode.",
+   "Settings.profile.form.section.experience.mode.option-label": "{name} mode",
+@@ -336,7 +336,7 @@
+   "app.components.HomePage.welcome": "Welcome on board 👋",
+   "app.components.HomePage.welcome.again": "Welcome 👋",
+   "app.components.HomePage.welcomeBlock.content": "Congrats! You are logged as the first administrator. To discover the powerful features provided by Strapi, we recommend you to create your first Content type!",
+-  "app.components.HomePage.welcomeBlock.content.again": "We hope you are making progress on your project! Feel free to read the latest news about Strapi. We are giving our best to improve the product based on your feedback.",
++  "app.components.HomePage.welcomeBlock.content.again": "We hope you are making progress on your project! Feel free to contact us. We are giving our best to improve the product based on your feedback.",
+   "app.components.HomePage.welcomeBlock.content.issues": "issues.",
+   "app.components.HomePage.welcomeBlock.content.raise": " or raise ",
+   "app.components.ImgPreview.hint": "Drag & drop your file into this area or {browse} for a file to upload",
+@@ -355,8 +355,8 @@
+   "app.components.LeftMenu.logout": "Logout",
+   "app.components.LeftMenu.logo.alt": "Application logo",
+   "app.components.LeftMenu.plugins": "Plugins",
+-  "app.components.LeftMenu.navbrand.title": "Strapi Dashboard",
+-  "app.components.LeftMenu.navbrand.workplace": "Workplace",
++  "app.components.LeftMenu.navbrand.title": "Kayumanis Dashboard",
++  "app.components.LeftMenu.navbrand.workplace": "Jimbaran",
+   "app.components.LeftMenuFooter.help": "Help",
+   "app.components.LeftMenuFooter.poweredBy": "Powered by ",
+   "app.components.LeftMenuLinkContainer.collectionTypes": "Collection Types",
+diff --git a/node_modules/@strapi/admin/index.html b/node_modules/@strapi/admin/index.html
+index a00a161..6b7658c 100644
+--- a/node_modules/@strapi/admin/index.html
++++ b/node_modules/@strapi/admin/index.html
+@@ -6,7 +6,7 @@
+     <!-- Make the page mobile compatible -->
+     <meta name="viewport" content="width=device-width, initial-scale=1" />
+     <meta name="mobile-web-app-capable" content="yes" />
+-    <title>Strapi Admin</title>
++    <title>Kayumanis CMS Admin</title>
+   </head>
+   <body>
+     <!-- The app hooks into this div -->

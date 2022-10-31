@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_layout_slider_images",
+  "info": {
+    "displayName": "Slider_Image",
+    "icon": "align-justify"
+  },
+  "options": {},
+  "attributes": {
+    "Image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}
