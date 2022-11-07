@@ -4,7 +4,8 @@
   "info": {
     "singularName": "review",
     "pluralName": "reviews",
-    "displayName": "Reviews"
+    "displayName": "Reviews",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -57,6 +58,14 @@
         "Rate - 5 Stars"
       ],
       "required": true
+    },
+    "Order_Items": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "integer"
     }
   }
 }

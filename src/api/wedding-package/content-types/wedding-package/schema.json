@@ -4,7 +4,8 @@
   "info": {
     "singularName": "wedding-package",
     "pluralName": "wedding-packages",
-    "displayName": "Wedding_Packages"
+    "displayName": "Wedding_Packages",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -35,17 +36,17 @@
       "required": true
     },
     "Image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
       "allowedTypes": [
         "images"
       ],
-      "type": "media",
-      "multiple": false,
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      },
-      "required": true
+      }
     },
     "Package_Rate": {
       "pluginOptions": {
@@ -110,6 +111,14 @@
       },
       "component": "seo.seo",
       "required": true
+    },
+    "Order_Items": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "integer"
     }
   }
 }

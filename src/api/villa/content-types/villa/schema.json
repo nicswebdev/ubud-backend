@@ -155,16 +155,6 @@
       "relation": "oneToMany",
       "target": "api::villa-facilitie.villa-facilitie"
     },
-    "Facilities": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::villa-facilitie.villa-facilitie"
-    },
-    "Benefits": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::villa-benefit.villa-benefit"
-    },
     "SEO": {
       "type": "component",
       "repeatable": false,
@@ -175,6 +165,32 @@
       },
       "component": "seo.seo",
       "required": true
+    },
+    "All_Facilities": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "richtext",
+      "required": true
+    },
+    "All_Benefits": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "richtext",
+      "required": true
+    },
+    "Order_Items": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "integer"
     }
   }
 }

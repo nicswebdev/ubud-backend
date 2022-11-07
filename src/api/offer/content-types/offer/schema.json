@@ -42,7 +42,7 @@
         }
       },
       "type": "text",
-      "required": true
+      "required": false
     },
     "Inclusions": {
       "pluginOptions": {
@@ -157,6 +157,23 @@
       },
       "component": "seo.seo",
       "required": true
+    },
+    "Expired_Date": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "date"
+    },
+    "Order_Items": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "integer",
+      "required": false
     }
   }
 }
