@@ -4,7 +4,8 @@
   "info": {
     "singularName": "gallery-page",
     "pluralName": "gallery-pages",
-    "displayName": "Gallery Page"
+    "displayName": "Gallery Page",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -35,17 +36,17 @@
       "required": true
     },
     "Header_Image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
       "allowedTypes": [
         "images"
       ],
-      "type": "media",
-      "multiple": false,
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      },
-      "required": true
+      }
     },
     "Villa": {
       "type": "component",
@@ -56,17 +57,6 @@
         }
       },
       "component": "layout.gallery-image"
-    },
-    "Activities": {
-      "type": "component",
-      "repeatable": true,
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "component": "layout.gallery-image",
-      "required": true
     },
     "Wedding": {
       "type": "component",
@@ -101,7 +91,7 @@
       "component": "layout.gallery-image",
       "required": true
     },
-    "Villa_Ground": {
+    "Surrounding": {
       "type": "component",
       "repeatable": true,
       "pluginOptions": {
@@ -112,34 +102,7 @@
       "component": "layout.gallery-image",
       "required": true
     },
-    "Video": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "string",
-      "required": true
-    },
-    "All_Text": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "string",
-      "required": true
-    },
     "Villa_Tab_Text": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "string",
-      "required": true
-    },
-    "Activities_Tab_Text": {
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -175,7 +138,7 @@
       "type": "string",
       "required": true
     },
-    "Villa_Ground_Tab_Text": {
+    "Surrounding_Tab_Text": {
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -184,13 +147,15 @@
       "type": "string",
       "required": true
     },
-    "Video_Tab_Text": {
+    "SEO": {
+      "type": "component",
+      "repeatable": false,
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "type": "string",
+      "component": "seo.seo",
       "required": true
     }
   }
