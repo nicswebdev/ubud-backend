@@ -116,7 +116,7 @@ index 1adc22f..26d7854 100644
                  </Grid>
  
 diff --git a/node_modules/@strapi/admin/admin/src/translations/en.json b/node_modules/@strapi/admin/admin/src/translations/en.json
-index 128dff9..0068b26 100644
+index 128dff9..348527b 100644
 --- a/node_modules/@strapi/admin/admin/src/translations/en.json
 +++ b/node_modules/@strapi/admin/admin/src/translations/en.json
 @@ -14,7 +14,7 @@
@@ -134,7 +134,7 @@ index 128dff9..0068b26 100644
    "Auth.form.username.placeholder": "e.g. Kai_Doe",
 -  "Auth.form.welcome.subtitle": "Log in to your Strapi account",
 -  "Auth.form.welcome.title": "Welcome to Strapi!",
-+  "Auth.form.welcome.subtitle": "Log in to your Kayumanis Sanur CMS account",
++  "Auth.form.welcome.subtitle": "Log in to your Kayumanis Ubud CMS account",
 +  "Auth.form.welcome.title": "Welcome!",
    "Auth.link.forgot-password": "Forgot your password?",
    "Auth.link.ready": "Ready to sign in?",
@@ -175,7 +175,7 @@ index 128dff9..0068b26 100644
 -  "app.components.LeftMenu.navbrand.title": "Strapi Dashboard",
 -  "app.components.LeftMenu.navbrand.workplace": "Workplace",
 +  "app.components.LeftMenu.navbrand.title": "Kayumanis Dashboard",
-+  "app.components.LeftMenu.navbrand.workplace": "Sanur",
++  "app.components.LeftMenu.navbrand.workplace": "Ubud",
    "app.components.LeftMenuFooter.help": "Help",
    "app.components.LeftMenuFooter.poweredBy": "Powered by ",
    "app.components.LeftMenuLinkContainer.collectionTypes": "Collection Types",
